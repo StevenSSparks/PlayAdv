@@ -1,0 +1,11 @@
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\appsettings.json
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\PlayAdv.deps.json
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\PlayAdv.runtimeconfig.json
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\PlayAdv.runtimeconfig.dev.json
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\PlayAdv.dll
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\PlayAdv.pdb
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\PlayAdv.csproj.CoreCompileInputs.cache
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\PlayAdv.AssemblyInfoInputs.cache
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\PlayAdv.AssemblyInfo.cs
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\PlayAdv.dll
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\PlayAdv.pdb

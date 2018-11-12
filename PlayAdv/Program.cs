@@ -10,6 +10,10 @@ namespace PlayAdv
     class Program
     {
         private static PlayAdv.GameMoveResult gmr;
+        private static IConfiguration configuration;
+        private static string ApiUrl = "";
+        private static int TaskTimeOut = 10 * 1000; 
+
 
         static private async Task NewGame(AdventureClient client)
         {
@@ -25,21 +29,28 @@ namespace PlayAdv
             gmr = _gmr;
         }
 
-        public static Boolean PlayAdventure(string URL)
+
+
+        public static Boolean PlayAdventure(string ApiUrl)
         {
             Int64 InstanceID = new Int64(); 
             bool error = false;
             string errormsg = "";
+
             AdventureClient client = new AdventureClient();
+
             GameMove gm = new GameMove();
-            client.BaseUrl = URL;
+
+            client.BaseUrl = ApiUrl;
+
             Task T;
 
-            string move; 
+            string move = ""; 
 
             try
             {
                 T = NewGame(client);
+                T.Wait(TaskTimeOut);
                 InstanceID = gmr.InstanceID;
                 error = false; 
             }
@@ -49,29 +60,52 @@ namespace PlayAdv
                 errormsg = "Error: Can not create new game;";
             }
 
-            string cmd = "";
-            while (cmd != "cquit")
+            while (move != "cquit")
             {
 
-                Console.WriteLine(gmr.RoomName);
-                Console.WriteLine(gmr.RoomMessage);
-                Console.WriteLine(gmr.ItemsMessage);
-
-                move = Console.ReadLine();
-
-                try
+                switch (move)
                 {
-                    gm.Move = move;
-                    gm.InstanceID = InstanceID;
-                    T = GameMove(client, gm);
-                    error = false;
-                }
-                catch (Exception)
-                {
-                    error = true;
-                    errormsg = "Error: Can not Process Move;";
-                }
+                    case "capi":
+                        Console.WriteLine();
+                        Console.WriteLine("Api:" + ApiUrl);
+                        Console.WriteLine();
+                        move = "";
+                        break;
+                    default:
+               
+                    Console.WriteLine(gmr.RoomName);
+                    Console.WriteLine(gmr.RoomMessage);
+                    Console.WriteLine(gmr.ItemsMessage);
+                    Console.Write(">");
 
+                        if (error == true)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("Client Error:");
+                            Console.WriteLine(errormsg);
+                            Console.WriteLine();
+                        }
+
+                    move = Console.ReadLine();
+
+                    try
+                    {
+                        gm.Move = move;
+                        gm.InstanceID = InstanceID;
+                        T = GameMove(client, gm);
+                        T.Wait(TaskTimeOut);
+                        error = false;
+                    }
+                    catch (Exception)
+                    {
+                        error = true;
+                        errormsg = "Error: Can not Process Move - Possible Timeout";
+
+                    }
+                        break; 
+
+
+                }
 
             }
             
@@ -88,7 +122,7 @@ namespace PlayAdv
         {
             string WelcomeTitle = "";
             string WelcomeText = ""; 
-            string ApiUrl = "http://localhost:5000";
+            
 
             try
             {
@@ -96,27 +130,46 @@ namespace PlayAdv
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("appsettings.json");
 
-                var configuration = builder.Build();
+                var _configuration = builder.Build();
+                configuration = _configuration;
 
                 WelcomeTitle = configuration["WelcomeTitle"];
                 WelcomeText = configuration["WelcomeText"];
                 ApiUrl = configuration["ApiUrl"];
+                
+                string _timeout = configuration["ClientTimeOut"];
+                if (Convert.ToInt32(_timeout) > 0)
+                {
+                    TaskTimeOut = Convert.ToInt32(_timeout); 
+                    TaskTimeOut = TaskTimeOut * 1000;
+                };
 
+                Console.WriteLine();
                 Console.WriteLine(WelcomeTitle);
                 Console.WriteLine(WelcomeText);
-                Console.WriteLine("Api:" + ApiUrl);
-                Console.WriteLine("");
+                Console.WriteLine();
 
- 
             }
-            catch
+            catch (Exception)
             {
+                Console.WriteLine("-----------------------------------------------------------------");
                 Console.WriteLine("Error: appsettings.json error.");
+                Console.WriteLine("Using Defaults");
+                WelcomeTitle = "API Adventure";
+                WelcomeText = "";
+                ApiUrl = "http://adventure.eastus.azurecontainer.io";
+                Console.WriteLine();
+                Console.WriteLine(WelcomeTitle);
+                Console.WriteLine(WelcomeText);
+                Console.WriteLine("");
+                Console.WriteLine("-----------------------------------------------------------------");
             }
+
+            Console.WriteLine("cquit = quit game");
+            Console.WriteLine("");
 
             bool x = PlayAdventure(ApiUrl);
 
-            var r = Console.ReadKey();
 
         }
     }

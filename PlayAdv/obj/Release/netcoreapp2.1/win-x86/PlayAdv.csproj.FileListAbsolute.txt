@@ -1,0 +1,15 @@
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\win-x86\hostpolicy.dll
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\win-x86\hostfxr.dll
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\win-x86\PlayAdv.exe
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\win-x86\appsettings.json
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\win-x86\PlayAdv.deps.json
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\win-x86\PlayAdv.runtimeconfig.json
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\win-x86\PlayAdv.runtimeconfig.dev.json
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\win-x86\PlayAdv.dll
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\bin\Release\netcoreapp2.1\win-x86\PlayAdv.pdb
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\win-x86\PlayAdv.csprojAssemblyReference.cache
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\win-x86\PlayAdv.csproj.CoreCompileInputs.cache
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\win-x86\PlayAdv.AssemblyInfoInputs.cache
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\win-x86\PlayAdv.AssemblyInfo.cs
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\win-x86\PlayAdv.dll
+C:\Users\stespa\Documents\bitbucket\PlayAdvApi\PlayAdv\obj\Release\netcoreapp2.1\win-x86\PlayAdv.pdb
