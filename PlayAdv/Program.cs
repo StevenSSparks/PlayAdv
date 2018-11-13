@@ -40,24 +40,24 @@ namespace PlayAdv
             AdventureClient client = new AdventureClient();
 
             GameMove gm = new GameMove();
-
             client.BaseUrl = ApiUrl;
-
             Task T;
 
             string move = ""; 
 
             try
             {
-                T = NewGame(client);
-                T.Wait(TaskTimeOut);
-                InstanceID = gmr.InstanceID;
+                T = NewGame(client); // create a new instance of the game. 
+                T.Wait(TaskTimeOut); // wait up to the length of the timeout for the instance to be created. 
+                InstanceID = gmr.InstanceID; 
                 error = false; 
             }
             catch (Exception)
             {
+                // oops! Looks like we had a problem starting the game. 
                 error = true;
-                errormsg = "Error: Can not create new game;";
+                errormsg = "Error: Can not create new game; Try RESTART ";
+                gmr.RoomMessage = errormsg; // report the error ro the user; 
             }
 
             while (move != "cquit")
@@ -99,9 +99,10 @@ namespace PlayAdv
                     catch (Exception)
                     {
                         error = true;
-                        errormsg = "Error: Can not Process Move - Possible Timeout";
+                        errormsg = "Error: Can not Process Move - Possible Timeout. Try move again or LOOK.";
+                        gmr.RoomMessage = errormsg; // report the error ro the user; 
 
-                    }
+                        }
                         break; 
 
 
@@ -113,6 +114,10 @@ namespace PlayAdv
             {
                 Console.WriteLine(errormsg); 
             }
+
+            // delete the instance of game. 
+            T = client.QuitGameAsync(gm);
+            T.Wait(TaskTimeOut);
 
             return error; 
         }
