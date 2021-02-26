@@ -93,7 +93,7 @@ namespace PlayAdv
 
                         Console.WriteLine();
                         SetColor(ConsoleColor.Yellow);
-                        Console.WriteLine(UNDERLINE);  Console.Write(gmr.RoomName); Console.WriteLine(RESET);
+                        Console.Write(gmr.RoomName);
                         Console.WriteLine();
                         SetColor(ConsoleColor.Green);
                         Console.WriteLine(gmr.RoomMessage);
@@ -177,7 +177,7 @@ namespace PlayAdv
         {
             Console.WriteLine();
             SetColor(ConsoleColor.DarkBlue);
-            Console.WriteLine(UNDERLINE); Console.Write(WelcomeTitle.ToUpper()); ; Console.WriteLine(RESET);
+            Console.WriteLine(WelcomeTitle.ToUpper());
             SetColor(ConsoleColor.White); Console.Write(DevBy + " "); SetColor(ConsoleColor.Red); Console.WriteLine(SteveSparks);
             SetColor(ConsoleColor.White);
             Console.Write("Find out more on "); SetColor(ConsoleColor.Green); Console.Write(RepoName); SetColor(ConsoleColor.White); Console.Write(" at "); SetColor(ConsoleColor.Blue); Console.Write(RepoURL);
