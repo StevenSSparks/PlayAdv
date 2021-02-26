@@ -1,0 +1,7 @@
+C:\Users\stevesparks\source\testpublish\PlayAdv.pdb
+C:\Users\stevesparks\source\testpublish\appsettings.json
+C:\Users\stevesparks\source\testpublish\clrcompression.dll
+C:\Users\stevesparks\source\testpublish\clrjit.dll
+C:\Users\stevesparks\source\testpublish\coreclr.dll
+C:\Users\stevesparks\source\testpublish\mscordaccore.dll
+C:\Users\stevesparks\source\testpublish\PlayAdv.exe

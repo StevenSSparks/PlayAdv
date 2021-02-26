@@ -18,35 +18,45 @@ namespace PlayAdv
     {
         private static GameMoveResult gmr;
         private static IConfiguration configuration;
-        private static string ApiUrl = "";
+
+        const string DevBy = "Developed by";
+        readonly static string SteveSparks = "Steve Sparks";
+        readonly static string RepoName = "GitHub";
+        readonly static string RepoURL = "https://github.com/StevenSSparks";
+        readonly static string WelcomeTitle = "Adventure Sever Client";
+        static string ApiUrl { get; set; }  = new string("https://advsrv.azurewebsites.net");
+        const string UNDERLINE = "\x1B[4m";
+        const string RESET = "\x1B[0m";
 
 
-        public static Boolean PlayAdventure(string WelcomeTitle, string WelcomeText, string ApiUrl)
+        public static Boolean PlayAdventure()
         {
             string instanceID;
             string move;
             bool error;
             string errormsg = "";
             
-            var _gmr = new GameMoveResult();
+            
 
             var _httpClient = new System.Net.Http.HttpClient();
-            var _client = new swaggerClient(_httpClient);
-            _client.BaseUrl = ApiUrl;
-            
-            
-    
+            var _client = new swaggerClient(_httpClient)
+            {
+                BaseUrl = ApiUrl
+            };
+
+
 
             move = ""; 
 
             try
             {
+                DisplayIntro();
                 Console.WriteLine();
-                Console.WriteLine(WelcomeTitle);
-                Console.WriteLine(WelcomeText);
-                Console.WriteLine();
-                Console.WriteLine("cquit = quit game");
+                SetColor(ConsoleColor.Yellow);
+                Console.WriteLine("cquit = quit game and capi = Display API endpoint");
+                SetColor(ConsoleColor.Green);
                 Console.WriteLine("");
+
 
                 // default to game 1 until I we have selection system
                 // Gets the first game and sets up the game 
@@ -58,9 +68,11 @@ namespace PlayAdv
             catch (Exception e)
             {
                 // oops! Looks like we had a problem starting the game. 
+                SetColor(ConsoleColor.Red);
                 errormsg = "Error: Can not create new game (" +ApiUrl+")";
                 Console.WriteLine(errormsg);
                 Console.WriteLine(e.ToString());
+                SetColor(ConsoleColor.Green);
                 return false;
             }
 
@@ -71,22 +83,33 @@ namespace PlayAdv
                 {
                     case "capi":
                         Console.WriteLine();
+                        SetColor(ConsoleColor.Yellow);
                         Console.WriteLine("Api:" + ApiUrl);
+                        SetColor(ConsoleColor.Green);
                         Console.WriteLine();
                         move = "";
                         break;
                     default:
-               
-                    Console.WriteLine(gmr.RoomName);
-                    Console.WriteLine(gmr.RoomMessage);
-                    Console.WriteLine(gmr.ItemsMessage);
-                    Console.Write(">");
+
+                        Console.WriteLine();
+                        SetColor(ConsoleColor.Yellow);
+                        Console.Write(gmr.RoomName);
+                        Console.WriteLine();
+                        SetColor(ConsoleColor.Green);
+                        Console.WriteLine(gmr.RoomMessage);
+                        SetColor(ConsoleColor.DarkCyan);
+                        Console.WriteLine(gmr.ItemsMessage);
+                        Console.WriteLine();
+                        SetColor(ConsoleColor.White);
+                        Console.Write("What now?"); SetColor(ConsoleColor.Green); Console.Write(" >"); SetColor(ConsoleColor.Green);
 
                         if (error == true)
                         {
                             Console.WriteLine();
+                            SetColor(ConsoleColor.Red);
                             Console.WriteLine("Client Error:");
                             Console.WriteLine(errormsg);
+                            SetColor(ConsoleColor.Green);
                             Console.WriteLine();
                         }
 
@@ -98,11 +121,13 @@ namespace PlayAdv
                             // just pass the game move with the instance id 
                             gmr = _client.Adventure2Async(instanceID,move).GetAwaiter().GetResult();
                         }
-                        catch (Exception e)
+                        catch (Exception)
                         {
                             error = true;
+                            SetColor(ConsoleColor.Red);
                             errormsg = "Error: Can not Process Move - Possible Timeout. Try move again or LOOK.";
                             gmr.RoomMessage = errormsg; // report the error ro the user; 
+                            SetColor(ConsoleColor.Green);
 
                         }
                         break; 
@@ -120,16 +145,10 @@ namespace PlayAdv
             return error; 
         }
 
-        public static bool HelpCheck(string[] args)
-        {
-            if (args.Where(i => i.Contains("help")).Count() > 0) return true;
-            if (args.Count() == 0) return true;
-            return false; 
-        }
 
         public static bool ArgCheck(string key, string[] args)
         {
-            if (args.Where(i => i.Contains(key)).Count() > 0) return true;
+            if (args.Where(i => i.Contains(key)).Any()) return true;
             return false;
         }
 
@@ -142,7 +161,7 @@ namespace PlayAdv
                 
                 if (arg.Contains(key))
                 {
-                    if (args.Count() <= index) return "";
+                    if (args.Length <= index) return "";
                     var value = args[index+1];
                     return value; 
                 }
@@ -154,25 +173,48 @@ namespace PlayAdv
 
         }
 
-        public static void DisplayHelp(string title, string welcome, string url)
+        public static void DisplayIntro()
         {
-            Console.WriteLine(title);
-            Console.WriteLine(welcome);
             Console.WriteLine();
+            SetColor(ConsoleColor.DarkBlue);
+            Console.WriteLine(WelcomeTitle.ToUpper());
+            SetColor(ConsoleColor.White); Console.Write(DevBy + " "); SetColor(ConsoleColor.Red); Console.WriteLine(SteveSparks);
+            SetColor(ConsoleColor.White);
+            Console.Write("Find out more on "); SetColor(ConsoleColor.Green); Console.Write(RepoName); SetColor(ConsoleColor.White); Console.Write(" at "); SetColor(ConsoleColor.Blue); Console.Write(RepoURL);
+            Console.WriteLine();
+        }
+
+
+
+        public static void DisplayHelp()
+        {
+            Console.WriteLine();
+            DisplayIntro();
+            Console.WriteLine();
+            SetColor(ConsoleColor.Yellow);  
             Console.WriteLine("Play Adventure Help");
-            Console.WriteLine("--help                         This message.");
-            Console.WriteLine("--url [url]                    URL for Adventure API.");
-            Console.WriteLine("--play                         Atempts to play game at default url: " + url);
-            Console.WriteLine("--timeout [value in seconds]   Sets value for the API call timeout. Min is 1 & Max is 60" );
+            SetColor(ConsoleColor.Green); Console.WriteLine("--url [url]                    URL for Adventure API.");
+            SetColor(ConsoleColor.Green); Console.WriteLine("--play                         Atempts to play game at default url: " + ApiUrl);
+            Console.WriteLine();
+            SetColor(ConsoleColor.Yellow); Console.WriteLine("Example: PlayAdv.exe --url https://advsrv.azurewebsites.net");
+            SetColor(ConsoleColor.Yellow); Console.WriteLine("Example: PlayAdv.exe --url http://localhost:5001");
+            SetColor(ConsoleColor.Yellow); Console.WriteLine("Example: PlayAdv.exe --play");
+            SetColor(ConsoleColor.White);
+            Console.WriteLine();
             Console.WriteLine();
 
         }
 
+        static void SetColor(ConsoleColor consoleWordColor)
+        {
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = consoleWordColor;
+        }
+            
+
         static void Main(string[] args)
         {
-            string WelcomeTitle;
-            string WelcomeText;
-            string ClientTimeOut;
+
 
             try
             {
@@ -183,46 +225,29 @@ namespace PlayAdv
                 var _configuration = builder.Build();
                 configuration = _configuration;
 
-                WelcomeTitle = configuration["WelcomeTitle"];
-                WelcomeText = configuration["WelcomeText"];
-                ApiUrl = configuration["ApiUrl"];
-                ClientTimeOut = configuration["ClientTimeOut"];
+
+                ApiUrl = configuration["ApiUrl"].ToString();
 
 
             }
             catch (Exception)
             {
-                Console.WriteLine("appsettings.json missing items using default values");
-
-                WelcomeTitle = "API Adventure";
-                WelcomeText = "Client for the API Adventure api use playadv.exe --help";
-                ApiUrl = "https://adventureserver.azurewebsites.net";
-                ClientTimeOut = "10";
-
+              
+                Console.WriteLine();
+                SetColor(ConsoleColor.Red);
+                Console.WriteLine("Optional: appsettings.json missing items using default values");
+                SetColor(ConsoleColor.Yellow);
+                Console.WriteLine("Example: appsettings.json");
+                Console.WriteLine("{");
+                Console.WriteLine("   \"ApiURL\": \"http://https://advsrv.azurewebsites.net/\"");
+                Console.WriteLine("}");
+                SetColor(ConsoleColor.Green);
             }
+  
 
             try
             {
 
-             
-                if (HelpCheck(args))
-                {
-                    DisplayHelp(WelcomeTitle, WelcomeText, ApiUrl);
-                    return;
-                }
-
-                if (GetArgValue("--timeout", args) == "")
-                {
-                    // do nothing use default
-                }
-                else
-                {
-                    var tov = GetArgValue("--timeout", args);
-                    var tv = Convert.ToInt32(tov);
-                    if (tv > 60) tv = 60;
-                    if (tv < 1) tv = 10;
-
-                }
 
                 if (ArgCheck("--play", args))
                 {
@@ -238,7 +263,7 @@ namespace PlayAdv
 
                 if (GetArgValue("--url", args) == "")
                 {
-                    DisplayHelp(WelcomeTitle, WelcomeText, ApiUrl);
+                    DisplayHelp();
                     return;
                 }
                 else
@@ -251,18 +276,22 @@ namespace PlayAdv
 
                     if (urlcheckresult == false)
                     {
+                        SetColor(ConsoleColor.Red);
                         Console.WriteLine("Error: " + ApiUrl + " is not a valid url.");
                         Console.WriteLine();
+                        SetColor(ConsoleColor.Green);
                         return;
                     }
                 }
 
-                bool x = PlayAdventure(WelcomeTitle, WelcomeText, ApiUrl);
+                bool x = PlayAdventure();
 
             }
             catch (Exception)
             {
+                SetColor(ConsoleColor.Yellow);
                 Console.WriteLine("Error Starting Game at " + ApiUrl);
+                SetColor(ConsoleColor.Green);
             }
 
 

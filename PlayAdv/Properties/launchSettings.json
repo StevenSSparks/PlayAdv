@@ -2,7 +2,7 @@
   "profiles": {
     "PlayAdv": {
       "commandName": "Project",
-      "commandLineArgs": "--play --timeout 25 --url https://advsrv.azurewebsites.net/"
+      "commandLineArgs": "--url https://advsrv.azurewebsites.net/"
     }
   }
 }
