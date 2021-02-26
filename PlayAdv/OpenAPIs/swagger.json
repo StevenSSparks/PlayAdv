@@ -1,0 +1,232 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Adventure Server",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "http://advsrv.azurewebsites.net"
+    }
+  ],
+  "paths": {
+    "/api/Adventure/list": {
+      "get": {
+        "tags": [
+          "Adventure"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Game"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Game"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Game"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Adventure": {
+      "get": {
+        "tags": [
+          "Adventure"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameMoveResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameMoveResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameMoveResult"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Adventure"
+        ],
+        "parameters": [
+          {
+            "name": "InstanceID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Move",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameMoveResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameMoveResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameMoveResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Adventure/{id}": {
+      "get": {
+        "tags": [
+          "Adventure"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameMoveResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameMoveResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameMoveResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "Welcome"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Game": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc": {
+            "type": "string",
+            "nullable": true
+          },
+          "ver": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GameMoveResult": {
+        "type": "object",
+        "properties": {
+          "instanceID": {
+            "type": "string",
+            "nullable": true
+          },
+          "roomName": {
+            "type": "string",
+            "nullable": true
+          },
+          "roomMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemsMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "healthReport": {
+            "type": "string",
+            "nullable": true
+          },
+          "playerName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

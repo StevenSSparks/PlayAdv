@@ -21,3 +21,16 @@ C:\Users\steve\Documents\GitHub\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayA
 C:\Users\steve\Documents\GitHub\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.AssemblyInfo.cs
 C:\Users\steve\Documents\GitHub\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.dll
 C:\Users\steve\Documents\GitHub\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.pdb
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\bin\Debug\netcoreapp2.1\PlayAdv.deps.json
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\bin\Debug\netcoreapp2.1\PlayAdv.runtimeconfig.json
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\bin\Debug\netcoreapp2.1\PlayAdv.runtimeconfig.dev.json
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\bin\Debug\netcoreapp2.1\PlayAdv.dll
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\bin\Debug\netcoreapp2.1\PlayAdv.pdb
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.csprojAssemblyReference.cache
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.AssemblyInfoInputs.cache
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.AssemblyInfo.cs
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.csproj.CoreCompileInputs.cache
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.dll
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.pdb
+C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\obj\Debug\netcoreapp2.1\PlayAdv.genruntimeconfig.cache
