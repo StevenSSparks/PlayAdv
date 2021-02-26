@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "B6Cm2nAQmVSj+nLnnSq8ujdb0zlJYwGK/NjNEM4fSrsk06vWOnLAIZKSg4Pxp60DKscVpzrUqKLzzsK31uM8PQ==",
+  "dgSpecHash": "eLY5KT0+MbJP2mXOa0kMEDO1kHb0TgseWgFFN7hq5yVHaYyBllZneUHJT0h8miUoWrQdI/+JmljJ4EJEZMMC9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\stevesparks\\source\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.apidescription.client\\3.0.0\\microsoft.extensions.apidescription.client.3.0.0.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.8\\microsoft.extensions.configuration.3.1.8.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.8\\microsoft.extensions.configuration.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.8\\microsoft.extensions.configuration.fileextensions.3.1.8.nupkg.sha512",
@@ -13,9 +14,11 @@
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.8\\microsoft.extensions.filesystemglobbing.3.1.8.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.8\\microsoft.extensions.primitives.3.1.8.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\3.1.8\\microsoft.netcore.app.runtime.win-x86.3.1.8.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.8\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.8.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.8\\microsoft.aspnetcore.app.runtime.win-x86.3.1.8.nupkg.sha512"
+    "C:\\Users\\stevesparks\\.nuget\\packages\\nswag.apidescription.client\\13.0.5\\nswag.apidescription.client.13.0.5.nupkg.sha512",
+    "C:\\Users\\stevesparks\\.nuget\\packages\\nswag.msbuild\\13.0.5\\nswag.msbuild.13.0.5.nupkg.sha512",
+    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\5.0.3\\microsoft.netcore.app.runtime.win-x86.5.0.3.nupkg.sha512",
+    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\5.0.3\\microsoft.windowsdesktop.app.runtime.win-x86.5.0.3.nupkg.sha512",
+    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\5.0.3\\microsoft.aspnetcore.app.runtime.win-x86.5.0.3.nupkg.sha512"
   ],
   "logs": []
 }

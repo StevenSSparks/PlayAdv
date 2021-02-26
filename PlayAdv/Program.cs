@@ -28,14 +28,16 @@ namespace PlayAdv
             bool error;
             string errormsg = "";
             
-            var _gmr = new GameMoveResult();
+            
 
             var _httpClient = new System.Net.Http.HttpClient();
-            var _client = new swaggerClient(_httpClient);
-            _client.BaseUrl = ApiUrl;
-            
-            
-    
+            var _client = new swaggerClient(_httpClient)
+            {
+                BaseUrl = ApiUrl
+            };
+
+
+
 
             move = ""; 
 
@@ -98,7 +100,7 @@ namespace PlayAdv
                             // just pass the game move with the instance id 
                             gmr = _client.Adventure2Async(instanceID,move).GetAwaiter().GetResult();
                         }
-                        catch (Exception e)
+                        catch (Exception)
                         {
                             error = true;
                             errormsg = "Error: Can not Process Move - Possible Timeout. Try move again or LOOK.";
@@ -122,14 +124,14 @@ namespace PlayAdv
 
         public static bool HelpCheck(string[] args)
         {
-            if (args.Where(i => i.Contains("help")).Count() > 0) return true;
-            if (args.Count() == 0) return true;
+            if (args.Where(i => i.Contains("help")).Any()) return true;
+            if (args.Length == 0) return true;
             return false; 
         }
 
         public static bool ArgCheck(string key, string[] args)
         {
-            if (args.Where(i => i.Contains(key)).Count() > 0) return true;
+            if (args.Where(i => i.Contains(key)).Any()) return true;
             return false;
         }
 
@@ -142,7 +144,7 @@ namespace PlayAdv
                 
                 if (arg.Contains(key))
                 {
-                    if (args.Count() <= index) return "";
+                    if (args.Length <= index) return "";
                     var value = args[index+1];
                     return value; 
                 }
@@ -163,16 +165,19 @@ namespace PlayAdv
             Console.WriteLine("--help                         This message.");
             Console.WriteLine("--url [url]                    URL for Adventure API.");
             Console.WriteLine("--play                         Atempts to play game at default url: " + url);
-            Console.WriteLine("--timeout [value in seconds]   Sets value for the API call timeout. Min is 1 & Max is 60" );
             Console.WriteLine();
 
         }
 
         static void Main(string[] args)
         {
-            string WelcomeTitle;
-            string WelcomeText;
-            string ClientTimeOut;
+
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Green;
+
+           string  WelcomeTitle = "Adventure Sever Client";
+           string WelcomeText = "Developed by Steve Sparks, try playadv.exe --help";
+           string ApiUrl = "https://advsrv.azurewebsites.net";
 
             try
             {
@@ -183,22 +188,15 @@ namespace PlayAdv
                 var _configuration = builder.Build();
                 configuration = _configuration;
 
-                WelcomeTitle = configuration["WelcomeTitle"];
-                WelcomeText = configuration["WelcomeText"];
+
                 ApiUrl = configuration["ApiUrl"];
-                ClientTimeOut = configuration["ClientTimeOut"];
 
 
             }
             catch (Exception)
             {
                 Console.WriteLine("appsettings.json missing items using default values");
-
-                WelcomeTitle = "API Adventure";
-                WelcomeText = "Client for the API Adventure api use playadv.exe --help";
-                ApiUrl = "https://adventureserver.azurewebsites.net";
-                ClientTimeOut = "10";
-
+                DisplayHelp(WelcomeTitle, WelcomeText, ApiUrl);
             }
 
             try
@@ -211,18 +209,7 @@ namespace PlayAdv
                     return;
                 }
 
-                if (GetArgValue("--timeout", args) == "")
-                {
-                    // do nothing use default
-                }
-                else
-                {
-                    var tov = GetArgValue("--timeout", args);
-                    var tv = Convert.ToInt32(tov);
-                    if (tv > 60) tv = 60;
-                    if (tv < 1) tv = 10;
 
-                }
 
                 if (ArgCheck("--play", args))
                 {
