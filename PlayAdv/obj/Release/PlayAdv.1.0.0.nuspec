@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>PlayAdv</id>
+    <version>1.0.0</version>
+    <authors>Steve Sparks</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <icon>adventure.ico</icon>
+    <description>Client to play adventures from a commandline using the apiadventure hosted endpoint</description>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.Extensions.Configuration" version="3.1.8" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.FileExtensions" version="3.1.8" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Json" version="3.1.8" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\bin\Release\net5.0\PlayAdv.runtimeconfig.json" target="lib\net5.0\PlayAdv.runtimeconfig.json" />
+    <file src="C:\Users\stevesparks\source\PlayAdvApi\PlayAdv\bin\Release\net5.0\PlayAdv.dll" target="lib\net5.0\PlayAdv.dll" />
+    <file src="C:\Users\stevesparks\Pictures\adventure.ico" target="adventure.ico" />
+  </files>
+</package>

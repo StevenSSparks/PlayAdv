@@ -18,8 +18,6 @@ namespace PlayAdv
     {
         private static GameMoveResult gmr;
         private static IConfiguration configuration;
-        private static string ApiUrl = "";
-
 
         public static Boolean PlayAdventure(string WelcomeTitle, string WelcomeText, string ApiUrl)
         {
@@ -35,7 +33,6 @@ namespace PlayAdv
             {
                 BaseUrl = ApiUrl
             };
-
 
 
 

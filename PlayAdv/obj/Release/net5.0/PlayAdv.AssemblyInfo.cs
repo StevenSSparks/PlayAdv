@@ -13,8 +13,8 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Washington University in St. Louis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("Client to play adventures from a commandline using the apiadventure hosted endpoi" +
-    "nt")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Client to play adventures from a commandline using the adventure server hosted en" +
+    "dpoint")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlayAdv")]
