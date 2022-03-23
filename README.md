@@ -10,7 +10,7 @@ See the latest releases for more deails - https://github.com/StevenSSparks/PlayA
 
 # Build Details 
 * Visual Studio 2022 latest release 
-* .NET 5.6 current release 
+* .NET 6 current release 
 * The creation of the EXE requires a command line publish
    *  dotnet publish -r win-x64 /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true
 
