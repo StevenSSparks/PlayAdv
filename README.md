@@ -9,8 +9,8 @@ See the latest releases for more deails - https://github.com/StevenSSparks/PlayA
 * Have fun with lots of colors and make the game text visually appealing 
 
 # Build Details 
-* Visual Studio 2019 latest release 
-* .NET 5.0 current release 
+* Visual Studio 2022 latest release 
+* .NET 5.6 current release 
 * The creation of the EXE requires a command line publish
    *  dotnet publish -r win-x64 /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true
 
