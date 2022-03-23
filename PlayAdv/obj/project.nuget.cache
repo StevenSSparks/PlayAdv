@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9DSLLBAlIgGQxdHJJVgH9Lxm4hhtbFtXF/VVwYfDB7kIWWNwiSo6TYg2M4sNCenXV5GWeSB3QiAysku7BgoWLg==",
+  "dgSpecHash": "15/OHEbNqR6gPhA76NTWLm9vNBm4189slEqL8p3N6YlovpmB1gL3hUqJe2yaDzccQUP6wd72kh0XB3d89Z1GRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\stevesparks\\source\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj",
+  "projectFilePath": "C:\\Users\\stevesparks\\source\\github\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.apidescription.client\\3.0.0\\microsoft.extensions.apidescription.client.3.0.0.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.8\\microsoft.extensions.configuration.3.1.8.nupkg.sha512",
@@ -15,10 +15,7 @@
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.8\\microsoft.extensions.primitives.3.1.8.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\nswag.apidescription.client\\13.0.5\\nswag.apidescription.client.13.0.5.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\nswag.msbuild\\13.0.5\\nswag.msbuild.13.0.5.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.3\\microsoft.netcore.app.runtime.win-x64.5.0.3.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.3.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.3\\microsoft.aspnetcore.app.runtime.win-x64.5.0.3.nupkg.sha512"
+    "C:\\Users\\stevesparks\\.nuget\\packages\\nswag.msbuild\\13.0.5\\nswag.msbuild.13.0.5.nupkg.sha512"
   ],
   "logs": []
 }
