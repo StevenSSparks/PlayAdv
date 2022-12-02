@@ -1,37 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stevesparks\\source\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj": {}
+    "C:\\Users\\stevesparks\\source\\github\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stevesparks\\source\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj": {
+    "C:\\Users\\stevesparks\\source\\github\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stevesparks\\source\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj",
+        "projectUniqueName": "C:\\Users\\stevesparks\\source\\github\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj",
         "projectName": "PlayAdv",
-        "projectPath": "C:\\Users\\stevesparks\\source\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj",
+        "projectPath": "C:\\Users\\stevesparks\\source\\github\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj",
         "packagesPath": "C:\\Users\\stevesparks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stevesparks\\source\\PlayAdvApi\\PlayAdv\\obj\\publish\\win-x64\\",
+        "outputPath": "C:\\Users\\stevesparks\\source\\github\\PlayAdvApi\\PlayAdv\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\stevesparks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "\\\\files.wustl.edu\\shares\\IT\\EANUGET": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -42,8 +45,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.Extensions.ApiDescription.Client": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -87,15 +90,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[5.0.3, 5.0.3]"
+              "version": "[6.0.2, 6.0.2]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[5.0.3, 5.0.3]"
+              "version": "[6.0.2, 6.0.2]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[5.0.3, 5.0.3]"
+              "version": "[6.0.2, 6.0.2]"
             }
           ],
           "frameworkReferences": {
@@ -103,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zOccoZvA61skIaMRlWkvaQOgKrza74rFqj3EAnkF5GyY0W2aTQsA3yRQodFSLP0YZ7l1WeX8XAygYGsF2fA/VQ==",
+  "dgSpecHash": "p0cNi6wjn/IFRjV4W1dP9K2JliWzZSpxDY2mS84IwCi0EnmRvxxhxM2CrI5S1eKnGcfvFmq+3ra8b3FTSe1SBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\stevesparks\\source\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj",
+  "projectFilePath": "C:\\Users\\stevesparks\\source\\github\\PlayAdvApi\\PlayAdv\\PlayAdv.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.apidescription.client\\3.0.0\\microsoft.extensions.apidescription.client.3.0.0.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.8\\microsoft.extensions.configuration.3.1.8.nupkg.sha512",
@@ -16,9 +16,9 @@
     "C:\\Users\\stevesparks\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\nswag.apidescription.client\\13.0.5\\nswag.apidescription.client.13.0.5.nupkg.sha512",
     "C:\\Users\\stevesparks\\.nuget\\packages\\nswag.msbuild\\13.0.5\\nswag.msbuild.13.0.5.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.3\\microsoft.netcore.app.runtime.win-x64.5.0.3.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.3.nupkg.sha512",
-    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.3\\microsoft.aspnetcore.app.runtime.win-x64.5.0.3.nupkg.sha512"
+    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.2\\microsoft.netcore.app.runtime.win-x64.6.0.2.nupkg.sha512",
+    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.2\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.2.nupkg.sha512",
+    "C:\\Users\\stevesparks\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.2\\microsoft.aspnetcore.app.runtime.win-x64.6.0.2.nupkg.sha512"
   ],
   "logs": []
 }
